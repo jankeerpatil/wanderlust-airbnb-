@@ -23,18 +23,16 @@ const userRouter = require("./routes/user.js");
 
 // const MONGO_URL = "mongodb://127.0.0.1:27017/wanderlust";
 const dbUrl = process.env.ATLASDB_URL;
+mongoose.connect(dbUrl, {
+  useNewUrlParser: true,
+  useUnifiedTopology: true,
+}).then(() => {
+  console.log("Connected to MongoDB");
+}).catch((err) => {
+  console.log(err);
+});
 
-main()
-  .then(() => {
-    console.log("connected to DB");
-  })
-  .catch((err) => {
-    console.log(err);
-  });
 
-async function main() {
-  await mongoose.connect(dbUrl);
-}
 
 app.set("view engine", "ejs");
 app.set("views", path.join(__dirname, "views"));
@@ -61,7 +59,7 @@ const sessionOptions = {
   secret: process.env.SECRET,
   resave: false,
   saveUninitialized: true,
-  Cookie: {
+  cookie: {
     expires: Date.now() + 7 * 24 * 60 * 60 * 1000,  // 7 days * 24hr * 60min * 60 sec * 1000ms
     maxAge: 7 * 24 * 60 * 60 * 1000,
     httpOnly: true,
