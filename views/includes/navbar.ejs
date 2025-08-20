@@ -1,91 +1,80 @@
-<style>
+<style> 
+  .search-btn { 
+    background-color: #fe424d; 
+    color: #fff; 
+    border-radius: 25px; 
+    padding: 0 1rem; 
+    white-space: nowrap; /* Prevent text from breaking */ 
+    border: none; 
+  } 
   
-.search-btn {
-  background-color: #fe424d;
-  color: #fff;
-  border-radius: 25px;
-  padding: 0 1rem;
-  white-space: nowrap; /* Prevent text from breaking */
-  border: none;
-}
-
-.search-btn:hover {
-  background-color: #e63946;
-  color: #fff;
-}
-
-.search-btn i {
-  display: inline;
-  margin-right: 0.5rem;
-}
-
-/*  Search Input */
-.search-inp {
-  border-radius: 25px;
-    padding: 0.5rem 1rem;
-    font-size: 1rem;
-    min-width: 200px;
-    border: 1px solid #ced4da;
-}
-
-/* Navbar links spacing */
-  .navbar-nav a.nav-link {
-    margin-left: 0.5rem;
-    margin-right: 0.5rem;
-  }
-
-/*  RESPONSIVE STYLES */
-@media (max-width: 768px) {
-  .search-inp {
-    min-width: 150px;
-    font-size: 0.9rem;
-    padding: 0.4rem 2rem;
-  }
-
-  .search-btn {
-    padding: 0.4rem 0.8rem;
-    font-size: 0.9rem;
-  }
-
-  nav .navbar-brand {
-    font-size: 1.2rem;
-  }
-
-  nav .nav-link {
-    font-size: 0.9rem;
-    padding: 0.4rem;
-  }
-}
-
-@media (max-width: 576px) {
-
-  form.d-flex {
-      flex-direction: column;
-      align-items: stretch;
-    }
-
-  .search-inp {
-    width: 100%; /* take full width */
-    margin-bottom: 0.5rem;
-  }
-
-  .search-btn {
-    width: 100%;
-    display: block;
-    margin-top: 0.3rem;
-  }
-
-  .navbar-nav {
-      width: 100%;
-      text-align: center;
-    }
-
-    .navbar-nav a.nav-link {
-      margin: 0.2rem 0;
-    }
-}
-
-</style>
+  .search-btn:hover { 
+    background-color: #e63946; 
+    color: #fff; 
+  } 
+    
+  .search-btn i { 
+    display: inline; 
+    margin-right: 0.5rem; 
+  } 
+    
+  /* Search Input */ 
+  .search-inp { 
+    border-radius: 25px; 
+    padding: 0.5rem 1rem; 
+    font-size: 1rem; 
+    min-width: 200px; 
+    border: 1px solid #ced4da; 
+  } 
+      
+    /* Navbar links spacing */ 
+  .navbar-nav a.nav-link { 
+    margin-left: 0.5rem; 
+    margin-right: 0.5rem; 
+  } 
+        
+        /* RESPONSIVE STYLES */ 
+  @media (max-width: 768px) { 
+  .search-inp { 
+    min-width: 150px; 
+    font-size: 0.9rem; 
+    padding: 0.4rem 2rem; 
+  } 
+  .search-btn { 
+    padding: 0.4rem 0.8rem; 
+    font-size: 0.9rem; 
+  } 
+  nav .navbar-brand { 
+    font-size: 1.2rem; 
+  } 
+  nav .nav-link { 
+    font-size: 0.9rem; 
+    padding: 0.4rem; 
+  } 
+  } 
+  @media (max-width: 576px) { 
+  form.d-flex { 
+    flex-direction: column; 
+    align-items: stretch; 
+  } 
+  .search-inp { 
+    width: 100%; /* take full width */ 
+    margin-bottom: 0.5rem; 
+  } 
+  .search-btn { 
+    width: 100%; 
+    display: block; 
+    margin-top: 0.3rem; 
+  } 
+  .navbar-nav { 
+    width: 100%; 
+    text-align: center; 
+  } 
+ .navbar-nav a.nav-link { 
+    margin: 0.2rem 0; 
+  } 
+  } 
+    </style>
 
 <nav class="navbar navbar-expand-md bg-body-tertiary border-bottom sticky-top">
     <div class="container-fluid">
